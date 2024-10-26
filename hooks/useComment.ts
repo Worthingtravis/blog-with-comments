@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import useSWR from "swr";
 import { useAuth0 } from "@auth0/auth0-react";
 
-const fetcher = (url) =>
+const fetcher = (url: URL | RequestInfo)=>
   fetch(url).then((res) => {
     if (res.ok) {
       return res.json();
